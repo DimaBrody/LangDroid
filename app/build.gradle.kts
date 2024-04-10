@@ -32,11 +32,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_17.toString()
+        jvmTarget = JavaVersion.VERSION_11.toString()
     }
     buildFeatures {
         compose = true
@@ -74,5 +74,6 @@ dependencies {
     implementation(libs.ktor.client.json)
     implementation(libs.ktor.client.android)
 
-    implementation(project(":summary"))
+    implementation("com.github.DimaBrody.LangDroid:summary:0.1.0")
+//    implementation(project(":summary"))
 }

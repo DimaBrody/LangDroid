@@ -1,6 +1,7 @@
 rootProject.name = "langdroid"
 
 pluginManagement {
+    includeBuild("plugins")
     repositories {
         gradlePluginPortal()
         google()
@@ -16,6 +17,7 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven(url = "https://jitpack.io")
     }
 }
 

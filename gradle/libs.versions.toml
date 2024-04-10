@@ -1,5 +1,5 @@
 [versions]
-agp = "8.2.1"
+agp = "8.2.2"
 kotlin = "1.9.23"
 coroutines = "1.8.0"
 ktor = "2.3.5"
@@ -14,6 +14,7 @@ androidxCore = "1.12.0"
 androidxLifecycleRuntime = "2.7.0"
 androidxActivityCompose = "1.8.2"
 compose = "2024.04.00"
+maven = "2.1"
 
 
 [libraries]
@@ -31,6 +32,7 @@ ktor-client-serialization = { group = "io.ktor", name = "ktor-client-serializati
 ktor-client-logging = { group = "io.ktor", name = "ktor-client-logging", version.ref = "ktor" }
 ktor-client-content-negotiation = { group = "io.ktor", name = "ktor-client-content-negotiation", version.ref = "ktor" }
 ktor-client-serialization-json = { group = "io.ktor", name = "ktor-serialization-kotlinx-json", version.ref = "ktor" }
+kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
 
 android-gradle-build = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
 androidx-core = { module = "androidx.core:core-ktx", version.ref = "androidxCore" }
@@ -54,6 +56,7 @@ kotlin-multiplaform = { id = "org.jetbrains.kotlin.multiplatform", version.ref =
 kotlinx-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 kotlinx-binary-validator = { id = "org.jetbrains.kotlinx.binary-compatibility-validator", version = "0.13.2" }
 maven-publish = { id = "com.vanniktech.maven.publish", version = "0.25.3" }
+maven-publish-descendants = { id = "com.github.dcendents.android-maven", version.ref = "maven"}
 spotless = { id = "com.diffplug.gradle.spotless", version = "6.20.0" }
 dokka = { id = "org.jetbrains.dokka", version = "1.8.20" }
 

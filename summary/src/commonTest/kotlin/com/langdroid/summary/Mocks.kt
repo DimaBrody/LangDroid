@@ -90,6 +90,6 @@ internal object Mocks {
         }
 
     private fun defaultStatesAfter(isTestCompleteness: Boolean): List<SummaryState> =
-        if (isTestCompleteness) listOf() else listOf(SummaryState.Finished)
+        if (isTestCompleteness) listOf() else listOf(SummaryState.Success)
 
 }

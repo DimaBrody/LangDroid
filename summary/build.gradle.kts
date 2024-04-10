@@ -2,6 +2,7 @@ plugins {
     kotlin("multiplatform")
     id("com.android.library")
     id("com.diffplug.spotless")
+    id("library-module-publish")
 }
 
 kotlin {
@@ -26,8 +27,8 @@ kotlin {
 
         val commonMain by getting {
             dependencies {
-                implementation(libs.coroutines.core)
                 api(project(":core"))
+                implementation(libs.coroutines.core)
             }
         }
 
@@ -53,8 +54,11 @@ kotlin {
                 implementation(libs.androidx.lifecycle.livedata)
             }
         }
-
     }
+}
+
+dependencies {
+    api(project(":core"))
 }
 
 android {
@@ -67,5 +71,5 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
-
 }
+

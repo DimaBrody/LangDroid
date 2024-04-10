@@ -25,13 +25,12 @@ import com.langdroid.sample.ui.theme.LangdroidTheme
 import com.langdroid.summary.SummaryChain
 import com.langdroid.summary.SummaryState
 import com.langdroid.summary.extensions.collectUntilFinished
+import com.langdroid.summary.liveData
 import com.langdroid.summary.prompts.PromptsAndMessage
-
-//import com.langdroid.summary.SummaryChain
 
 // IMPORTANT! Use {text} in your prompts for places where prompt has to be pasted during processing
 private const val WIKIPEDIA_FINAL_PROMPT = """
-Write a very detailed summary of Wikipedia page, the following text delimited by triple backquotes.
+Write a very detailed summary of the Wikipedia page, the following text delimited by triple backquotes.
 Return your response with bullet points which covers the most important key points of the text, sequentially and coherently.
 ```{text}```
 BULLET POINT SUMMARY:
@@ -67,7 +66,7 @@ class MainActivity : ComponentActivity() {
         val summaryChain = SummaryChain(
             model = openAiModel,
 
-            //Optional values below
+            // Optional values below
             isStream = true,
             promptsAndMessage = promptsAndMessage
         )

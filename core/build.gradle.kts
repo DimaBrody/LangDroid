@@ -2,6 +2,7 @@ plugins {
     kotlin("multiplatform")
     id("com.android.library")
     id("com.diffplug.spotless")
+    id("library-module-publish")
 }
 
 kotlin {
@@ -15,7 +16,6 @@ kotlin {
             }
         }
     }
-
 
     sourceSets {
         val commonMain by getting {
@@ -50,7 +50,4 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
-
 }
-
-
