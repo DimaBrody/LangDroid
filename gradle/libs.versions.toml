@@ -1,0 +1,63 @@
+[versions]
+agp = "8.2.1"
+kotlin = "1.9.23"
+coroutines = "1.8.0"
+ktor = "2.3.5"
+openai = "3.7.0"
+gemini = "0.2.2"
+tokenizer = "0.3.0"
+googleSecretPlugin = "2.0.1"
+mockk = "1.13.10"
+turbine = "1.1.0"
+
+androidxCore = "1.12.0"
+androidxLifecycleRuntime = "2.7.0"
+androidxActivityCompose = "1.8.2"
+compose = "2024.04.00"
+
+
+[libraries]
+# Coroutines
+
+coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
+coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutines" }
+flows-test = { group = "app.cash.turbine", name = "turbine", version.ref = "turbine" }
+mockk-test = { group = "io.mockk", name = "mockk", version.ref = "mockk" }
+
+# Ktor
+ktor-client-json = { group = "io.ktor", name = "ktor-client-json", version.ref = "ktor" }
+ktor-client-android = { group = "io.ktor", name = "ktor-client-android", version.ref = "ktor" }
+ktor-client-serialization = { group = "io.ktor", name = "ktor-client-serialization", version.ref = "ktor" }
+ktor-client-logging = { group = "io.ktor", name = "ktor-client-logging", version.ref = "ktor" }
+ktor-client-content-negotiation = { group = "io.ktor", name = "ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-client-serialization-json = { group = "io.ktor", name = "ktor-serialization-kotlinx-json", version.ref = "ktor" }
+
+android-gradle-build = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
+androidx-core = { module = "androidx.core:core-ktx", version.ref = "androidxCore" }
+androidx-lifecycle-runtime = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "androidxLifecycleRuntime" }
+androidx-lifecycle-livedata = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "androidxLifecycleRuntime" }
+androidx-lifecycle-runtime-compose = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "androidxLifecycleRuntime" }
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidxActivityCompose" }
+compose-bom = { module = "androidx.compose:compose-bom", version.ref = "compose" }
+compose-ui = { module = "androidx.compose.ui:ui", version = "unspecified" }
+compose-ui-graphics = { module = "androidx.compose.ui:ui-graphics", version = "unspecified" }
+compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version = "unspecified" }
+compose-material = { module = "androidx.compose.material3:material3", version = "unspecified" }
+
+
+openai = { group = "com.aallam.openai", name = "openai-client", version.ref = "openai" }
+gemini = { group = "com.google.ai.client.generativeai", name = "generativeai", version.ref = "gemini" }
+tokenizer = { group = "com.aallam.ktoken", name = "ktoken", version.ref = "tokenizer" }
+
+[plugins]
+kotlin-multiplaform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+kotlinx-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+kotlinx-binary-validator = { id = "org.jetbrains.kotlinx.binary-compatibility-validator", version = "0.13.2" }
+maven-publish = { id = "com.vanniktech.maven.publish", version = "0.25.3" }
+spotless = { id = "com.diffplug.gradle.spotless", version = "6.20.0" }
+dokka = { id = "org.jetbrains.dokka", version = "1.8.20" }
+
+google-secrets = { id = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin", version.ref = "googleSecretPlugin" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+android-kotlin-multiplatform-library = { id = "com.android.kotlin.multiplatform.library", version.ref = "agp" }
+android-application = { id = "com.android.application", version.ref = "agp" }
