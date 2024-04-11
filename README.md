@@ -10,10 +10,12 @@ Main idea is to use general model `LangDroidModel` which implements functionalit
 
 Example of summary of [Wikipedia article about Immanuel Kant](https://en.wikipedia.org/wiki/Immanuel_Kant) written by [OpenAI GPT 3.5](https://openai.com/blog/gpt-3-5-turbo-fine-tuning-and-api-updates):
 
-[//]: # (![Sample App Gif]&#40;https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTFjamxocGRib3VoNjdjeHQ5YzV0bW50dWZhazA3cTFxbXdiemt2ZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/L2iGGb3fyBRQGpO53o/giphy.gif&#41;)
-<p align="center">
-  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTFjamxocGRib3VoNjdjeHQ5YzV0bW50dWZhazA3cTFxbXdiemt2ZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/L2iGGb3fyBRQGpO53o/giphy.gif" alt="Sample App Gif">
-</p>
+![Sample App Gif](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTFjamxocGRib3VoNjdjeHQ5YzV0bW50dWZhazA3cTFxbXdiemt2ZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/L2iGGb3fyBRQGpO53o/giphy.gif)
+[//]: # (<p align="center">)
+
+[//]: # (  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTFjamxocGRib3VoNjdjeHQ5YzV0bW50dWZhazA3cTFxbXdiemt2ZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/L2iGGb3fyBRQGpO53o/giphy.gif" alt="Sample App Gif">)
+
+[//]: # (</p>)
 
 This is a `sample` app which has example of Langdroid Summary implementation.
 
