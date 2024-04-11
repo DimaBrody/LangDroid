@@ -143,10 +143,12 @@ summaryChain(text)
 </details>
 
 ### 3. (Optional) Set you own prompts and other settings to chain
-<details>
-<summary>
+[//]: # (<details>)
+[//]: # (<summary>)
+
 Custom prompts require `{text}` element as place where input text will be placed
-</summary>
+
+[//]: # (</summary>)
 
 ```kotlin
 // IMPORTANT! Use {text} in your prompts for places where prompt has to be pasted during processing
@@ -174,7 +176,7 @@ val summaryChain = SummaryChain(
 )
 ```
 
-</details>
+[//]: # (</details>)
 
 ## 🛠️ Library Development
 Initially there were 2 modules for my Science App, which summarizes [arxiv](https://arxiv.org/) scientific papers. As this library worked fine for me, I've decided to publish it to GitHub, in case someone needs same functionality, even though there is a lot to develop to cover the majority of topics the LLM can do for user, especially as it's done by [🦜 LangChain](https://www.langchain.com/) or Facebook [LlamaIndex](https://docs.llamaindex.ai/en/stable/examples/index_structs/knowledge_graph/KnowledgeGraphDemo/).
