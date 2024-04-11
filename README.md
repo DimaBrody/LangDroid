@@ -141,10 +141,11 @@ summaryChain(text)
 ```
 </details>
 
-(Optional) You can also set you own prompts and other settings to chain:
+#### 3. (Optional) Set you own prompts and other settings to chain:
+Custom prompts require `{text}` element as place where input text will be placed:
+
 ```kotlin
 // IMPORTANT! Use {text} in your prompts for places where prompt has to be pasted during processing
-// otherwise summary chain won't understand which text to summarize
 private const val WIKIPEDIA_FINAL_PROMPT = """
 Write a very detailed summary of Wikipedia page, the following text delimited by triple backquotes.
 Return your response with bullet points which covers the most important key points of the text, sequentially and coherently.
