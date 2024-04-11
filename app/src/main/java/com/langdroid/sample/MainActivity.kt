@@ -30,7 +30,7 @@ import com.langdroid.summary.prompts.PromptsAndMessage
 
 // IMPORTANT! Use {text} in your prompts for places where prompt has to be pasted during processing
 private const val WIKIPEDIA_FINAL_PROMPT = """
-Write a very detailed summary of Wikipedia page, the following text delimited by triple backquotes.
+Write a very detailed summary of the Wikipedia page, the following text delimited by triple backquotes.
 Return your response with bullet points which covers the most important key points of the text, sequentially and coherently.
 ```{text}```
 BULLET POINT SUMMARY:

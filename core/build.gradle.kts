@@ -2,6 +2,8 @@ plugins {
     kotlin("multiplatform")
     id("com.android.library")
     id("com.diffplug.spotless")
+    id("maven-publish")
+    id("signing")
 }
 
 kotlin {
@@ -53,4 +55,17 @@ android {
 
 }
 
+afterEvaluate {
+    publishing {
+        publications {
+            if (this is MavenPublication) {
+                pom {
+                    name.set("langdroid-core")
+                    description.set("Langdroid Core Library")
+                    url.set("https://github.com/DimaBrody/LangDroid")
+                }
+            }
+        }
+    }
+}
 

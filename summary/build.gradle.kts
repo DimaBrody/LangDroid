@@ -2,6 +2,7 @@ plugins {
     kotlin("multiplatform")
     id("com.android.library")
     id("com.diffplug.spotless")
+    id("maven-publish")
 }
 
 kotlin {
@@ -67,5 +68,19 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+}
 
+
+afterEvaluate {
+    publishing {
+        publications {
+            if (this is MavenPublication) {
+                pom {
+                    name.set("langdroid-summary")
+                    description.set("Langdroid Summary Library")
+                    url.set("https://github.com/DimaBrody/LangDroid")
+                }
+            }
+        }
+    }
 }

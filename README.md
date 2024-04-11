@@ -49,7 +49,7 @@ You have to create `LangDroidModel<*>`, which requires API key and contains text
 val openAiKey = BuildConfig.OPENAI_API_KEY
 
 val model = LangDroidModel(
-	OpenAiModel.Gpt3_5(openAiKey)
+    OpenAiModel.Gpt3_5Plus(openAiKey)
 )
 
 // Google Gemini models are also available: 
@@ -58,10 +58,10 @@ val model = LangDroidModel(
 You can update `GenerativeConfig` for selected model ([more](https://www.promptingguide.ai/introduction/settings) about LLM configuration):
 ```kotlin
 val model = LangDroidModel(
-	OpenAiModel.Gpt3_5(openAiKey),
-	GenerativeConfig.create {
-		temperature = 0.2f
-		topP = 0.8f,
+	OpenAiModel.Gpt3_5Plus(openAiKey),
+	GenerativeConfig.create { 
+        temperature = 0.2f
+		topP = 0.8f
 		maxOutputTokens = 1024
 	}
 )
@@ -111,8 +111,8 @@ summaryFlow.collectUntilFinished { state ->
 			isStream = true: returns pieces of outputs like ... Output("Hel"), Output("lo, how"), Output(" are you?");
 			isStream = false: returns the whole text Output("...")
 		*/ }
-        is SummaryState.Success -> { /* Summary is finished successfully */ }
-        is SummaryState.Failure -> { /* Summary is failed; `state.t as Throwable` */ }
+        is SummaryState.Success -> { /* Summary has finished successfully */ }
+        is SummaryState.Failure -> { /* Summary has failed; `state.t as Throwable` */ }
     }
 }
 ```
@@ -141,13 +141,16 @@ summaryChain(text)
 ```
 </details>
 
-#### 3. (Optional) Set you own prompts and other settings to chain:
-Custom prompts require `{text}` element as place where input text will be placed:
+#### 3. (Optional) Set you own prompts and other settings to chain
+<details>
+<summary>
+Custom prompts require `{text}` element as place where input text will be placed
+</summary>
 
 ```kotlin
 // IMPORTANT! Use {text} in your prompts for places where prompt has to be pasted during processing
 private const val WIKIPEDIA_FINAL_PROMPT = """
-Write a very detailed summary of Wikipedia page, the following text delimited by triple backquotes.
+Write a very detailed summary of the Wikipedia page, the following text delimited by triple backquotes.
 Return your response with bullet points which covers the most important key points of the text, sequentially and coherently.
 ```{text}```
 BULLET POINT SUMMARY:
@@ -169,6 +172,8 @@ val summaryChain = SummaryChain(
     promptsAndMessage = promptsAndMessage
 )
 ```
+
+</details>
 
 ## 🛠️ Library Development
 Initially there were 2 modules for my Science App, which summarizes [arxiv](https://arxiv.org/) scientific papers. As this library worked fine for me, I've decided to publish it to GitHub, in case someone needs same functionality, even though there is a lot to develop to cover the majority of topics the LLM can do for user, especially as it's done by [🦜 LangChain](https://www.langchain.com/) or Facebook [LlamaIndex](https://docs.llamaindex.ai/en/stable/examples/index_structs/knowledge_graph/KnowledgeGraphDemo/).
