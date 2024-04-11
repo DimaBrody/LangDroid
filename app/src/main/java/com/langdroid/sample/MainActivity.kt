@@ -25,9 +25,8 @@ import com.langdroid.sample.ui.theme.LangdroidTheme
 import com.langdroid.summary.SummaryChain
 import com.langdroid.summary.SummaryState
 import com.langdroid.summary.extensions.collectUntilFinished
+import com.langdroid.summary.liveData
 import com.langdroid.summary.prompts.PromptsAndMessage
-
-//import com.langdroid.summary.SummaryChain
 
 // IMPORTANT! Use {text} in your prompts for places where prompt has to be pasted during processing
 private const val WIKIPEDIA_FINAL_PROMPT = """
@@ -67,7 +66,7 @@ class MainActivity : ComponentActivity() {
         val summaryChain = SummaryChain(
             model = openAiModel,
 
-            //Optional values below
+            // Optional values below
             isStream = true,
             promptsAndMessage = promptsAndMessage
         )

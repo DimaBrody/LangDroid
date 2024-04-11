@@ -66,7 +66,7 @@ class MainViewModel(
         val textToPrint = summaryState.toProcessingString(outputText)
 
         val processingState =
-            if (summaryState is SummaryState.Finished) ProcessingUiState.Success(outputText.orEmpty())
+            if (summaryState is SummaryState.Success) ProcessingUiState.Success(outputText.orEmpty())
             else ProcessingUiState.Summarizing(textToPrint)
 
         updateUiState { it.copy(processingState = processingState) }
@@ -117,7 +117,7 @@ private fun SummaryState.toProcessingString(outputText: String? = null): String 
     is SummaryState.Reduce -> "Processing chunks $processedChunks/$allChunks"
     is SummaryState.Summarizing -> "Summarizing text..."
     is SummaryState.Output -> outputText.orEmpty()
-    is SummaryState.Finished -> outputText.orEmpty()
+    is SummaryState.Success -> outputText.orEmpty()
 }
 
 

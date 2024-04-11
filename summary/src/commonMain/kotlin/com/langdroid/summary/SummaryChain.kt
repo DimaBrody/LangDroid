@@ -147,7 +147,7 @@ public class SummaryChain<M : GenerativeModel> : Chain<SummaryState> {
             )
         }
 
-        processingState.tryEmit(SummaryState.Finished)
+        processingState.tryEmit(SummaryState.Success)
     }
 
     public fun invokeAndGetFlow(text: String): SharedFlow<SummaryState> {

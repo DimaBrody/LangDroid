@@ -11,9 +11,9 @@ public sealed interface SummaryState : ChainState {
     // Used when isStream = false
     public data object Summarizing : SummaryState
     public data class Output(val text: String) : SummaryState
-    public data object Finished : SummaryState
+    public data object Success : SummaryState
     public data class Failure(val t: Throwable) : SummaryState
 }
 
 public fun SummaryState.isFinished(): Boolean =
-    this is SummaryState.Finished || this is SummaryState.Failure
+    this is SummaryState.Success || this is SummaryState.Failure
