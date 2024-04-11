@@ -90,9 +90,7 @@ Create a chain which consumes `text` and produces output states about text summa
 
 </details>
 
-To implement the summary chain functionality, you have to:
-1. Connect to chain state producer
-2. Invoke the chain and pass the `text`
+Implementation of the summary chain:
 
 ```kotlin
 val summaryChain = SummaryChain(model)
@@ -116,6 +114,9 @@ summaryFlow.collectUntilFinished { state ->
     }
 }
 ```
+
+- Connect to chain state producer
+- Invoke the chain and pass the `text`
 
 <details>
 <summary>There are also other ways connect and invoke summary chain</summary>
@@ -144,7 +145,6 @@ summaryChain(text)
 #### 3. (Optional) Set you own prompts and other settings to chain
 <details>
 <summary>
-
 Custom prompts require `{text}` element as place where input text will be placed
 </summary>
 
