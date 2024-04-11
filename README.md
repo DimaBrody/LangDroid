@@ -42,7 +42,7 @@ dependencies {
 > [!NOTE]
 > It's best practice to use environment variables for storing API keys. For guidance, refer to this [Kotlin tutorial on reading environment variables](https://www.baeldung.com/kotlin/read-env-variables) and learn how to implement the [Google Secrets Gradle plugin](https://www.baeldung.com/kotlin/read-env-variables) for Android.
 
-#### 1. Langdroid Model
+### 1. Langdroid Model
 You have to create `LangDroidModel<*>`, which requires API key and contains text completion functionality:
 ```kotlin
 // This variable set with google secrets plugin
@@ -77,7 +77,7 @@ val model = LangDroidModel(
 
 </details>
 
-#### 2. Summary chain
+### 2. Summary chain
 Create a chain which consumes `text` and produces output states about text summarization.
 
 <details>
@@ -142,7 +142,7 @@ summaryChain(text)
 ```
 </details>
 
-#### 3. (Optional) Set you own prompts and other settings to chain
+### 3. (Optional) Set you own prompts and other settings to chain
 <details>
 <summary>
 Custom prompts require `{text}` element as place where input text will be placed
