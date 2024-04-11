@@ -142,7 +142,7 @@ summaryChain(text)
 </details>
 
 (Optional) You can also set you own prompts and other settings to chain:
-```koltin
+```kotlin
 // IMPORTANT! Use {text} in your prompts for places where prompt has to be pasted during processing
 // otherwise summary chain won't understand which text to summarize
 private const val WIKIPEDIA_FINAL_PROMPT = """
@@ -158,11 +158,12 @@ val promptsAndMessage = PromptsAndMessage(
     systemMessage = "You are the Wikipedia oracle",
     // Prompt for final chunk mapping and overall summarization
     finalPrompt = WIKIPEDIA_FINAL_PROMPT,
-	// We ignore chunkPrompt here, therefore default will be used
+    // We ignore chunkPrompt here, therefore default will be used
 )
 
 val summaryChain = SummaryChain(
     model = model,
+    // You can get output as stream or as final text result
     isStream = false,
     promptsAndMessage = promptsAndMessage
 )
