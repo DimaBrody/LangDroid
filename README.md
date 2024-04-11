@@ -144,6 +144,7 @@ summaryChain(text)
 #### 3. (Optional) Set you own prompts and other settings to chain
 <details>
 <summary>
+
 Custom prompts require `{text}` element as place where input text will be placed
 </summary>
 
