@@ -32,6 +32,7 @@ ktor-client-serialization = { group = "io.ktor", name = "ktor-client-serializati
 ktor-client-logging = { group = "io.ktor", name = "ktor-client-logging", version.ref = "ktor" }
 ktor-client-content-negotiation = { group = "io.ktor", name = "ktor-client-content-negotiation", version.ref = "ktor" }
 ktor-client-serialization-json = { group = "io.ktor", name = "ktor-serialization-kotlinx-json", version.ref = "ktor" }
+kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
 
 android-gradle-build = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
 androidx-core = { module = "androidx.core:core-ktx", version.ref = "androidxCore" }

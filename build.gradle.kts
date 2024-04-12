@@ -43,17 +43,5 @@ subprojects {
             showStandardStreams = false
         }
     }
-
-//    publishing {
-//        publications {
-//            if (this is MavenPublication) {
-//                pom {
-//                    name.set("langdroid-summary")
-//                    description.set("Langdroid Summary Library")
-//                    url.set("https://github.com/DimaBrody/LangDroid")
-//                }
-//            }
-//        }
-//    }
 }
 

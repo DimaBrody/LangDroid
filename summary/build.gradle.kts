@@ -2,7 +2,7 @@ plugins {
     kotlin("multiplatform")
     id("com.android.library")
     id("com.diffplug.spotless")
-    id("maven-publish")
+    id("library-module-publish")
 }
 
 kotlin {
@@ -65,18 +65,13 @@ android {
         compileSdk = 34
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
-}
 
-publishing {
-    publications {
-        create<MavenPublication>("maven") {
-            from(components.findByName("release"))
-            groupId = project.group.toString()
-            artifactId = project.name
-            version = project.version.toString()
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
         }
     }
 }

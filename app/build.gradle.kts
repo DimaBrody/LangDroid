@@ -73,7 +73,7 @@ dependencies {
     implementation(libs.ktor.client.serialization.json)
     implementation(libs.ktor.client.json)
     implementation(libs.ktor.client.android)
-//    implementation("com.github.DimaBrody.LangDroid:summary:0.1.7")
+    implementation("com.github.DimaBrody.LangDroid:summary:0.1.8")
 
-    implementation(project(":summary"))
+//    implementation(project(":summary"))
 }
