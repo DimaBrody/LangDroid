@@ -1,6 +1,6 @@
 # Langdroid | Summaries for Kotlin and Android
 
-[![Maven Central](https://img.shields.io/maven-central/v/com.aallam.openai/openai-client?color=blue&label=Download)](https://central.sonatype.com/namespace/com.aallam.openai)
+[![](https://jitpack.io/v/DimaBrody/LangDroid.svg)](https://jitpack.io/#DimaBrody/LangDroid)
 [![License](https://img.shields.io/github/license/Aallam/openai-kotlin?color=yellow)](LICENSE.md)
 
 This **Kotlin Multiplatform** library is motivated by [🦜 LangChain](https://www.langchain.com/).
@@ -14,7 +14,7 @@ Example of summary of [Wikipedia article about Immanuel Kant](https://en.wikiped
 
 [//]: # (<p align="center">)
 
-[//]: # (  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTFjamxocGRib3VoNjdjeHQ5YzV0bW50dWZhazA3cTFxbXdiemt2ZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/L2iGGb3fyBRQGpO53o/giphy.gif" alt="Sample App Gif">)
+[//]: # (<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTFjamxocGRib3VoNjdjeHQ5YzV0bW50dWZhazA3cTFxbXdiemt2ZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/L2iGGb3fyBRQGpO53o/giphy.gif" alt="Sample App Gif">)
 
 [//]: # (</p>)
 
