@@ -36,7 +36,7 @@ If you need only text output and token calcuation functionality, you can use `:c
 
 ```groovy
 dependencies {
-	// :summary module contains it and shares its functionality by default
+    // :summary module contains it and shares its functionality by default
     implementation "com.arxiv.core"
 }
 ```
@@ -67,7 +67,7 @@ val model = LangDroidModel(
 	OpenAiModel.Gpt3_5Plus(openAiKey),
 	GenerativeConfig.create { 
         temperature = 0.2f
-		topP = 0.8f
+        topP = 0.8f
 		maxOutputTokens = 1024
 	}
 )
@@ -112,9 +112,9 @@ summaryFlow.collectUntilFinished { state ->
         is SummaryState.Reduce -> { /* Reducing text by summarizing chunks of it; `state.processedChunks, state.allChunks`*/ }
         is SummaryState.Summarizing -> { /* Can be returned when content is being summarized and isStream = false */ }
         is SummaryState.Output -> { /* `state.text`;
-			isStream = true: returns pieces of outputs like ... Output("Hel"), Output("lo, how"), Output(" are you?");
-			isStream = false: returns the whole text Output("...")
-		*/ }
+            isStream = true: returns pieces of outputs like ... Output("Hel"), Output("lo, how"), Output(" are you?");
+            isStream = false: returns the whole text Output("...")
+        */ }
         is SummaryState.Success -> { /* Summary has finished successfully */ }
         is SummaryState.Failure -> { /* Summary has failed; `state.t as Throwable` */ }
     }

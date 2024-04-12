@@ -63,4 +63,8 @@ publishing {
             version = project.version.toString()
         }
     }
+
+    repositories {
+        mavenLocal()
+    }
 }
