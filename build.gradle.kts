@@ -16,6 +16,7 @@ plugins {
 buildscript {
     dependencies {
         classpath(libs.android.gradle.build)
+//        classpath("com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.5")
     }
 }
 

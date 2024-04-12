@@ -3,9 +3,5 @@ jdk:
 before_install:
   - ./scripts/prepareJitpackEnvironment.sh
 
-install:
-  - echo "Installing"
-  - ./gradlew clean install -x test # Note: If you want to run tests, remove `-x test`
-
 build:
   - ./gradlew test spotlessApply build
