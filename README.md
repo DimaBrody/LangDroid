@@ -152,7 +152,7 @@ summaryChain(text)
 [//]: # (<details>)
 [//]: # (<summary>)
 
-Custom prompts require {text} element as place where input text will be placed
+Custom prompts require `{text}` element as place where input text will be placed
 
 [//]: # (</summary>)
 
