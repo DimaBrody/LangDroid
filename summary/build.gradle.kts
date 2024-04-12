@@ -74,7 +74,7 @@ publishing {
     publications {
         create<MavenPublication>("maven") {
             from(components.findByName("release"))
-            groupId = project.group.toString()
+            groupId = "com.langdroid"
             artifactId = project.name
             version = project.version.toString()
         }

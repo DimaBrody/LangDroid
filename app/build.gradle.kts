@@ -73,6 +73,7 @@ dependencies {
     implementation(libs.ktor.client.serialization.json)
     implementation(libs.ktor.client.json)
     implementation(libs.ktor.client.android)
+//    implementation("com.langdroid.core:core:0.1.5")
 
     implementation(project(":summary"))
 }
