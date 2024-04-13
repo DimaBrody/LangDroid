@@ -9,22 +9,17 @@ import org.gradle.kotlin.dsl.withType
 
 abstract class ModulePublishPlugin : Plugin<Project> {
     override fun apply(project: Project) {
-        // Ensure the 'maven-publish' plugin is applied
         with(project) {
             pluginManager.apply("maven-publish")
-//            pluginManager.apply("com.android.library")
-//            val extension = extensions.getByType<LibraryExtension>()
-//            configureAndroidPublishing(extension)
+            pluginManager.apply("com.android.library")
+            val extension = extensions.getByType<LibraryExtension>()
+            configureAndroidPublishing(extension)
 
             afterEvaluate {
                 val publishing = project.extensions.getByType(PublishingExtension::class.java)
                 publishing.publications {
 
-                    val kmmPublication = withType<MavenPublication>().named("kotlinMultiplatform")
-                    val mavenPublication = create("maven", MavenPublication::class.java) {
-                        // Configuration specific to MavenPublication
-                    }
-
+                    val mavenPublication = create("maven", MavenPublication::class.java)
                     mavenPublication.apply {
                         from(project.components.findByName("release"))
 
@@ -33,10 +28,8 @@ abstract class ModulePublishPlugin : Plugin<Project> {
                         version = project.version.toString()
                     }
 
+                    val kmmPublication = withType<MavenPublication>().named("kotlinMultiplatform")
                     kmmPublication.configure {
-                        // Assumes 'release' component is correctly configured
-//                        from(project.components.findByName("release"))
-
                         groupId = "com.langdroid.modules"
                         artifactId = project.name
                         version = project.version.toString()

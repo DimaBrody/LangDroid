@@ -25,10 +25,11 @@ Install Langdroid summary by adding the following dependency to your `build.grad
 ```groovy
 repositories {
     mavenCentral()
+    maven { url 'https://jitpack.io' }
 }
 
 dependencies {
-    implementation "com.arxiv.summary"
+    implementation "com.github.DimaBrody.LangDroid:summary:0.1.0"
 }
 ```
 
@@ -37,7 +38,7 @@ If you need only text output and token calcuation functionality, you can use `:c
 ```groovy
 dependencies {
     // :summary module contains it and shares its functionality by default
-    implementation "com.arxiv.core"
+    implementation "com.github.DimaBrody.LangDroid:core:0.1.0"
 }
 ```
 #### Multiplatform
