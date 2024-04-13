@@ -20,12 +20,20 @@ abstract class ModulePublishPlugin : Plugin<Project> {
                 val publishing = project.extensions.getByType(PublishingExtension::class.java)
                 publishing.publications {
 
-                    val mavenPublication = withType<MavenPublication>().named("kotlinMultiplatform")
-//                    val mavenPublication = create("kotlinMultiplatform", MavenPublication::class.java) {
-//                        // Configuration specific to MavenPublication
-//                    }
+                    val kmmPublication = withType<MavenPublication>().named("kotlinMultiplatform")
+                    val mavenPublication = create("maven", MavenPublication::class.java) {
+                        // Configuration specific to MavenPublication
+                    }
 
-                    mavenPublication.configure {
+                    mavenPublication.apply {
+                        from(project.components.findByName("release"))
+
+                        groupId = "com.langdroid.modules"
+                        artifactId = project.name
+                        version = project.version.toString()
+                    }
+
+                    kmmPublication.configure {
                         // Assumes 'release' component is correctly configured
 //                        from(project.components.findByName("release"))
 
