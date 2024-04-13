@@ -12,7 +12,7 @@ kotlin {
     androidTarget {
         compilations.all {
             kotlinOptions {
-                jvmTarget = JavaVersion.VERSION_11.toString()
+                jvmTarget = JavaVersion.VERSION_1_8.toString()
             }
         }
     }
@@ -39,15 +39,7 @@ kotlin {
 
     }
 
-    publishing {
-        publications.withType<MavenPublication>().named("jvm").configure {
-            // Assuming the existing publication might not include source JAR
-            // Add a sources jar if it's not already added
-            artifact(tasks.named("jvmSourcesJar").get()) {
-                classifier = "sources"
-            }
-        }
-    }
+//    puÏ
 }
 
 android {
