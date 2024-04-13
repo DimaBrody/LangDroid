@@ -74,6 +74,6 @@ dependencies {
     implementation(libs.ktor.client.json)
     implementation(libs.ktor.client.android)
 
-    implementation("com.github.DimaBrody.LangDroid:summary:0.1.0")
-//    implementation(project(":summary"))
+//    implementation("com.github.DimaBrody.LangDroid:summary:0.3.0")
+    implementation(project(":summary"))
 }

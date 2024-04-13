@@ -29,7 +29,7 @@ repositories {
 }
 
 dependencies {
-    implementation "com.github.DimaBrody.LangDroid:summary:0.1.0"
+    implementation "com.github.DimaBrody.LangDroid:summary:0.3.0"
 }
 ```
 
@@ -38,7 +38,7 @@ If you need only text output and token calcuation functionality, you can use `:c
 ```groovy
 dependencies {
     // :summary module contains it and shares its functionality by default
-    implementation "com.github.DimaBrody.LangDroid:core:0.1.0"
+    implementation "com.github.DimaBrody.LangDroid:core:0.3.0"
 }
 ```
 #### Multiplatform
