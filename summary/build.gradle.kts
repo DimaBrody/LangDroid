@@ -27,8 +27,8 @@ kotlin {
 
         val commonMain by getting {
             dependencies {
-                implementation(libs.coroutines.core)
                 api(project(":core"))
+                implementation(libs.coroutines.core)
             }
         }
 
@@ -71,10 +71,10 @@ kotlin {
             }
         }
     }
+}
 
-
-
-
+dependencies {
+    api(project(":core"))
 }
 
 android {
