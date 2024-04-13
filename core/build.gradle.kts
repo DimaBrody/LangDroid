@@ -38,6 +38,16 @@ kotlin {
         }
 
     }
+
+    publishing {
+        publications.withType<MavenPublication>().named("jvm").configure {
+            // Assuming the existing publication might not include source JAR
+            // Add a sources jar if it's not already added
+            artifact(tasks.named("jvmSourcesJar").get()) {
+                classifier = "sources"
+            }
+        }
+    }
 }
 
 android {
